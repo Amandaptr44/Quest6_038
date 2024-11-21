@@ -45,4 +45,13 @@ fun MahasiswaFormView(
     onBackButtonClicked: () -> Unit
 ){
 
-   }
+    var nama by remember {
+        mutableStateOf("")
+    }
+    var nim by remember {
+        mutableStateOf("")
+    }
+    var email by remember {
+        mutableStateOf("")
+    }
+    }
