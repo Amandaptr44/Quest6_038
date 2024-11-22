@@ -38,6 +38,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.navigationcompose.R
 
+
 @Composable
 fun MahasiswaFormView(
     modifier: Modifier,
@@ -54,4 +55,6 @@ fun MahasiswaFormView(
     var email by remember {
         mutableStateOf("")
     }
-    }
+    val listData: MutableList<String> =
+        mutableListOf(nim, nama, email)
+
