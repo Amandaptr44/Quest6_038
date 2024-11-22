@@ -129,4 +129,32 @@ fun MahasiswaFormView(
                              contentDescription = ""
                          )
                      },
-                   }
+                     keyboardOptions = KeyboardOptions(
+                         keyboardType = KeyboardType.Number,
+                         imeAction = ImeAction.Next
+                     ),
+                     singleLine = true,
+                     shape = RoundedCornerShape(50.dp)
+                 )
+                 Spacer(modifier = Modifier.padding(16.dp))
+                 Row(
+                     modifier = Modifier.fillMaxWidth(),
+                     horizontalArrangement =  Arrangement.SpaceEvenly
+                 ){
+                     Button(onClick = {
+                         onBackButtonClicked()
+                     }) {
+                         Text(text = "Kembali")
+                     }
+                     Button(onClick = {
+                         onSubmitButtonClicked(listData)
+                     }) {
+                         Text(text = "Simpan")
+                     }
+
+                 }
+             }
+
+         }
+     }
+}
