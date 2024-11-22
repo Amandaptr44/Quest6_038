@@ -95,3 +95,25 @@ fun MahasiswaFormView(
              )
          }
      }
+         Spacer(modifier = Modifier.padding(16.dp))
+         Box(
+           modifier = Modifier
+               .background(
+                   color = androidx.compose.ui.graphics.Color.Red,
+                   shape = RoundedCornerShape(
+                       topEnd = 15.dp,
+                       topStart = 15.dp
+                   )
+               )
+               .fillMaxSize(),
+         ){
+             Column(
+                 modifier = Modifier
+                     .fillMaxSize()
+                     .padding(16.dp),
+                 horizontalAlignment = Alignment.CenterHorizontally
+             ){
+                 Text(
+                     text = "Isi sesuai data yang kamu daftarkan",
+                     fontWeight = FontWeight.Light
+                 )
