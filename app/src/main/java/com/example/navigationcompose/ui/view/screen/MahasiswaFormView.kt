@@ -79,4 +79,13 @@ fun MahasiswaFormView(
              contentDescription = "",
              modifier = Modifier.size(45.dp)
          )
-        }
+         Spacer(modifier = Modifier.padding(16.dp))
+         Column {
+             Text(
+                 text = "Universitas Muhammadiyah Yogyakarta",
+                 color = Color.RED,
+                 fontSize = 15.sp,
+                 fontWeight = FontWeight.Bold
+                 )
+
+             }
