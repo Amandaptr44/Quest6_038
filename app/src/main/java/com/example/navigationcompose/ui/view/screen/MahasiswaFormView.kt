@@ -88,4 +88,10 @@ fun MahasiswaFormView(
                  fontWeight = FontWeight.Bold
                  )
 
-             }
+             Text(
+                 text = "Unggul dan Islami",
+                 color = androidx.compose.ui.graphics.Color.Red,
+                 fontWeight = FontWeight.Light
+             )
+         }
+     }
