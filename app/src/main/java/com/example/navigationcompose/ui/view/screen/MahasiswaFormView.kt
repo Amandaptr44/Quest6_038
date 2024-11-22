@@ -1,6 +1,6 @@
 package com.example.navigationcompose.ui.view.screen
 
-import android.graphics.Color
+
 import android.widget.Space
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -28,6 +28,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
@@ -41,7 +42,6 @@ import com.example.navigationcompose.R
 
 @Composable
 fun MahasiswaFormView(
-    modifier: Modifier,
     onSubmitButtonClicked: (MutableList<String>) -> Unit,
     onBackButtonClicked: () -> Unit
 ){
@@ -83,14 +83,15 @@ fun MahasiswaFormView(
          Column {
              Text(
                  text = "Universitas Muhammadiyah Yogyakarta",
-                 color = Color.RED,
+                 color = Color.Red,
                  fontSize = 15.sp,
                  fontWeight = FontWeight.Bold
                  )
 
              Text(
                  text = "Unggul dan Islami",
-                 color = androidx.compose.ui.graphics.Color.Red,
+                 color = Color.Red,
+                 fontSize = 10.sp,
                  fontWeight = FontWeight.Light
              )
          }
@@ -99,7 +100,7 @@ fun MahasiswaFormView(
          Box(
            modifier = Modifier
                .background(
-                   color = androidx.compose.ui.graphics.Color.Red,
+                   color = androidx.compose.ui.graphics.Color.White,
                    shape = RoundedCornerShape(
                        topEnd = 15.dp,
                        topStart = 15.dp
@@ -131,6 +132,46 @@ fun MahasiswaFormView(
                      },
                      keyboardOptions = KeyboardOptions(
                          keyboardType = KeyboardType.Number,
+                         imeAction = ImeAction.Next
+                     ),
+                     singleLine = true,
+                     shape = RoundedCornerShape(50.dp)
+                 )
+                 Spacer(modifier = Modifier.padding(16.dp))
+
+                 OutlinedTextField(
+                     modifier = Modifier.fillMaxWidth(),
+                     value = nama,
+                     onValueChange = {nama = it},
+                     label = { Text(text = "Nama Mahasiswa") },
+                     leadingIcon = {
+                         Icon(
+                             imageVector = Icons.Filled.Info,
+                             contentDescription = ""
+                         )
+                     },
+                     keyboardOptions = KeyboardOptions(
+                         keyboardType = KeyboardType.Text,
+                         imeAction = ImeAction.Next
+                     ),
+                     singleLine = true,
+                     shape = RoundedCornerShape(50.dp)
+                 )
+                 Spacer(modifier = Modifier.padding(16.dp))
+
+                 OutlinedTextField(
+                     modifier = Modifier.fillMaxWidth(),
+                     value = email,
+                     onValueChange = {email = it},
+                     label = { Text(text = "E-Mail Mahasiswa") },
+                     leadingIcon = {
+                         Icon(
+                             imageVector = Icons.Filled.Info,
+                             contentDescription = ""
+                         )
+                     },
+                     keyboardOptions = KeyboardOptions(
+                         keyboardType = KeyboardType.Text,
                          imeAction = ImeAction.Next
                      ),
                      singleLine = true,
